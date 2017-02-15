@@ -1,13 +1,12 @@
-/* eslint-env node */
-
-var testInfo = require('ember-cli-test-info');
-var useTestFrameworkDetector = require('../test-framework-detector');
+const testInfo = require('ember-cli-test-info');
+const useTestFrameworkDetector = require('../test-framework-detector');
 
 module.exports = useTestFrameworkDetector({
-  description: 'Generates a controller unit test.',
-  locals: function(options) {
-    return {
-      friendlyTestDescription: testInfo.description(options.entity.name, 'Unit', 'Controller')
-    };
-  }
+	description: 'Generates a controller unit test.',
+
+	locals(options) {
+		return {
+			friendlyTestDescription: testInfo.description(options.entity.name, 'Unit', 'Controller'),
+		};
+	},
 });
