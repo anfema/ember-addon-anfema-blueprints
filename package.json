@@ -1,6 +1,6 @@
 {
   "name": "ember-addon-anfema-blueprints",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "anfema's blueprints for ember-cli, matching our style guide.",
   "keywords": [
     "ember-addon",
@@ -9,9 +9,8 @@
   ],
   "homepage": "https://github.com/anfema/ember-addon-anfema-blueprints",
   "bugs": {
-      "url": "https://github.com/anfema/ember-addon-anfema-blueprints/issues"
-    },
-
+    "url": "https://github.com/anfema/ember-addon-anfema-blueprints/issues"
+  },
   "license": "MIT",
   "author": "anfema GmbH",
   "directories": {
@@ -19,8 +18,8 @@
     "test": "tests"
   },
   "repository": {
-  	"url": "git@github.com:anfema/ember-addon-anfema-blueprints.git",
-  	"type": "git"
+    "url": "git@github.com:anfema/ember-addon-anfema-blueprints.git",
+    "type": "git"
   },
   "scripts": {
     "build": "ember build",
