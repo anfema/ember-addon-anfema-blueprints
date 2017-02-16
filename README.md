@@ -1,24 +1,12 @@
 # ember-addon-anfema-blueprints
 
-anfema's blueprints for ember-cli, matching our style guide.
-
-Includes blueprints for ember and ember-data.
+anfema's blueprints for ember-cli, ember.js and ember-dats, matching our style guide.
 
 
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd ember-cli-blueprints-anfema`
-* `npm install`
-* `bower install`
+## Usage
 
 
-
-## Running
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
 
 
 
@@ -35,3 +23,10 @@ Includes blueprints for ember and ember-data.
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+
+
+## Credits
+
+- [Florian Pichler](https://github.com/pichfl)
+- [Vasyl Malinskyi](https://github.com/vmalinskyi)
