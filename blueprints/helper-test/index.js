@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 const testInfo = require('ember-cli-test-info');
 const stringUtils = require('ember-cli-string-utils');
 const isPackageMissing = require('ember-cli-is-package-missing');

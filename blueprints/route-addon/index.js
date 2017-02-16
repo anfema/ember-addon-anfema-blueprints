@@ -1,66 +1,66 @@
-/* eslint-env node */
-
-var stringUtil = require('ember-cli-string-utils');
-var path       = require('path');
-var inflector  = require('inflection');
+const stringUtil = require('ember-cli-string-utils');
+const path = require('path');
+const inflector = require('inflection');
 
 module.exports = {
-  description: 'Generates import wrappers for a route and its template.',
+	description: 'Generates import wrappers for a route and its template.',
 
-  fileMapTokens: function() {
-    return {
-      __templatepath__: function(options) {
-        if (options.pod) {
-          return path.join(options.podPath, options.dasherizedModuleName);
-        }
-        return 'templates';
-      },
-      __templatename__: function(options) {
-        if (options.pod) {
-          return 'template';
-        }
-        return options.dasherizedModuleName;
-      },
-      __name__: function (options) {
-        if (options.pod) {
-          return 'route';
-        }
+	fileMapTokens() {
+		return {
+			__templatepath__(options) {
+				if (options.pod) {
+					return path.join(options.podPath, options.dasherizedModuleName);
+				}
 
-        return options.dasherizedModuleName;
-      },
-      __path__: function(options) {
-        if (options.pod && options.hasPathToken) {
-          return path.join(options.podPath, options.dasherizedModuleName);
-        }
+				return 'templates';
+			},
+			__templatename__(options) {
+				if (options.pod) {
+					return 'template';
+				}
 
-        return 'routes';
-      },
-      __root__: function(options) {
-        if (options.inRepoAddon) {
-          return path.join('lib', options.inRepoAddon, 'app');
-        }
+				return options.dasherizedModuleName;
+			},
+			__name__(options) {
+				if (options.pod) {
+					return 'route';
+				}
 
-        return 'app';
-      }
-    };
-  },
+				return options.dasherizedModuleName;
+			},
+			__path__(options) {
+				if (options.pod && options.hasPathToken) {
+					return path.join(options.podPath, options.dasherizedModuleName);
+				}
 
-  locals: function (options) {
-    var locals = {};
-    var addonRawName = options.inRepoAddon ? options.inRepoAddon : options.project.name();
-    var addonName = stringUtil.dasherize(addonRawName);
-    var fileName = stringUtil.dasherize(options.entity.name);
+				return 'routes';
+			},
+			__root__(options) {
+				if (options.inRepoAddon) {
+					return path.join('lib', options.inRepoAddon, 'app');
+				}
 
-    ['route', 'template'].forEach(function (blueprint) {
-      var pathName = [addonName, inflector.pluralize(blueprint), fileName].join('/');
+				return 'app';
+			},
+		};
+	},
 
-      if (options.pod) {
-        pathName = [addonName, fileName, blueprint].join('/');
-      }
+	locals(options) {
+		const locals = {};
+		const addonRawName = options.inRepoAddon ? options.inRepoAddon : options.project.name();
+		const addonName = stringUtil.dasherize(addonRawName);
+		const fileName = stringUtil.dasherize(options.entity.name);
 
-      locals[blueprint + 'ModulePath'] = pathName;
-    });
+		['route', 'template'].forEach(function (blueprint) {
+			let pathName = [addonName, inflector.pluralize(blueprint), fileName].join('/');
 
-    return locals;
-  }
+			if (options.pod) {
+				pathName = [addonName, fileName, blueprint].join('/');
+			}
+
+			locals[`${blueprint}ModulePath`] = pathName;
+		});
+
+		return locals;
+	},
 };

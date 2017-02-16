@@ -56,7 +56,7 @@ module.exports = {
 	locals(options) {
 		let templatePath = '';
 		let importTemplate = '';
-		let contents = '';
+		let contents = '\n';
 
 		// if we're in an addon, build import statement
 		if (options.project.isEmberCLIAddon() || options.inRepoAddon && !options.inDummy) {
@@ -67,7 +67,7 @@ module.exports = {
 				}templates/components/${stringUtil.dasherize(options.entity.name)}`;
 			}
 			importTemplate = `import layout from '${templatePath}';\n`;
-			contents = '\n  layout';
+			contents = '\n\tlayout';
 		}
 
 		return {
