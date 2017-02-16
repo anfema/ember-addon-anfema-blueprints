@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import startApp from '<%= dasherizedPackageName %>/helpers/start-app';
 <% if (destroyAppExists) { %>import destroyApp from '<%= dasherizedPackageName %>/helpers/destroy-app';<% } else { %>import run from 'ember-runloop';<% } %>
 
-describe('<%= friendlyTestName %>', function() {
+describe('<%= friendlyTestName %>', function () {
 	let application;
 
 	beforeEach(function () {

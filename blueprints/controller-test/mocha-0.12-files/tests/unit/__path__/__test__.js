@@ -4,8 +4,7 @@ import { setupTest } from 'ember-mocha';
 
 describe('<%= friendlyTestDescription %>', function () {
 	setupTest('controller:<%= dasherizedModuleName %>', {
-		// Specify the other units that are required for this test.
-		// needs: ['controller:foo']
+		// needs: ['controller:foo'],
 	});
 
 	// Replace this with your real tests.

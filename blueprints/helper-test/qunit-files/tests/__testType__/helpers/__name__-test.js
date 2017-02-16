@@ -2,11 +2,9 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('<%= dasherizedModuleName %>',
-	'helper:<%= dasherizedModuleName %>', {
-	integration: true
-	}
-);
+moduleForComponent('<%= dasherizedModuleName %>', 'helper:<%= dasherizedModuleName %>', {
+	integration: true,
+});
 
 // Replace this with your real tests.
 test('it renders', function (assert) {
