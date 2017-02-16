@@ -1,5 +1,3 @@
 module.exports = {
-  env: {
-    embertest: true
-  }
+	extends: 'anfema/ember-tests',
 };
