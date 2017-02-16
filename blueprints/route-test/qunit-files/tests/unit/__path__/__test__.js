@@ -1,7 +1,7 @@
 import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('route:<%= dasherizedModuleName %>', '<%= friendlyTestDescription %>', {
-	// needs: ['controller:foo']
+	// needs: ['controller:foo'],
 });
 
 test('it exists', function (assert) {

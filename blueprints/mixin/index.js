@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 module.exports = {
-  description: 'Generates a mixin.'
+	description: 'Generates a mixin.',
 };

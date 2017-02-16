@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 module.exports = {
-  description: 'Generates an instance initializer.'
+	description: 'Generates an instance initializer.',
 };

@@ -1,8 +1,8 @@
 export function initialize(/* appInstance */) {
-  // appInstance.inject('route', 'foo', 'service:foo');
+	// appInstance.inject('route', 'foo', 'service:foo');
 }
 
 export default {
-  name: '<%= dasherizedModuleName %>',
-  initialize
+	name: '<%= dasherizedModuleName %>',
+	initialize,
 };
