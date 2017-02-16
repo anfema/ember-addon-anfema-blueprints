@@ -1,7 +1,7 @@
 import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('<%= dasherizedModuleName %>', '<%= friendlyDescription %>', {
-<%= typeof needs !== 'undefined' ? needs : '' %>
+	<%= typeof needs !== 'undefined' ? needs : '' %>
 });
 
 test('it exists', function (assert) {
