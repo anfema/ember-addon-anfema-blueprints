@@ -7,13 +7,21 @@
     "blueprints",
     "anfema"
   ],
+  "homepage": "https://github.com/anfema/ember-addon-anfema-blueprints",
+  "bugs": {
+      "url": "https://github.com/anfema/ember-addon-anfema-blueprints/issues"
+    },
+
   "license": "MIT",
-  "author": "",
+  "author": "anfema GmbH",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+  	"url": "git@github.com:anfema/ember-addon-anfema-blueprints.git",
+  	"type": "git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -57,7 +65,7 @@
     "loader.js": "^4.0.10"
   },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 6.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
