@@ -1,5 +1,7 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-<%= attrs.length ? '  ' + attrs : '' %>
+const { Model/* , attr, belongsTo, hasMany */ } = DS;
+
+export default Model.extend({
+<%= attrs.length ? '\t' + attrs : '' %>
 });

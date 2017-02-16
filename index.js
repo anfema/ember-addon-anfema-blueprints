@@ -1,6 +1,3 @@
-/* jshint node: true */
-'use strict';
-
 module.exports = {
-  name: 'ember-cli-blueprints-anfema'
+	name: 'ember-cli-blueprints-anfema',
 };

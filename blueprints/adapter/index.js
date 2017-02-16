@@ -1,15 +1,14 @@
-/* eslint-env node */
-
-var extendFromApplicationEntity = require('../../lib/utilities/extend-from-application-entity');
+const extendFromApplicationEntity = require('../../lib/utilities/extend-from-application-entity');
 
 module.exports = {
-  description: 'Generates an ember-data adapter.',
+	description: 'Generates an ember-data adapter.',
 
-  availableOptions: [
-    { name: 'base-class', type: String }
-  ],
+	availableOptions: [{
+		name: 'base-class',
+		type: String,
+	}],
 
-  locals: function(options) {
-    return extendFromApplicationEntity('adapter', 'DS.JSONAPIAdapter', options);
-  }
+	locals(options) {
+		return extendFromApplicationEntity('adapter', 'DS.JSONAPIAdapter', options);
+	},
 };
