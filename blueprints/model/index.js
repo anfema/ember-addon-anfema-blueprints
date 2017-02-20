@@ -68,8 +68,8 @@ module.exports = {
 
 		const needsDeduplicated = needs.filter((need, i) => needs.indexOf(need) === i);
 
-		attrs = attrs.join(`,${EOL}  `);
-		needs = `  needs: [${needsDeduplicated.join(', ')}]`;
+		attrs = `${attrs.join(`,${EOL}\t`)},`;
+		needs = `\tneeds: [${needsDeduplicated.join(', ')}],`;
 
 		return {
 			attrs,

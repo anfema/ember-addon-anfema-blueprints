@@ -22,7 +22,13 @@ function writeRoute(action, name, options) {
 	const routes = new EmberRouterGenerator(source);
 	const newRoutes = routes[action](name, options);
 
-	fs.writeFileSync(routerPath, newRoutes.code());
+	fs.writeFileSync(routerPath, newRoutes.code({
+		quote: 'single',
+		tabWidth: 4,
+		useTabs: true,
+		wrapColumn: 120,
+		trailingComma: true,
+	}));
 }
 
 function updateRouter(action, options) {
