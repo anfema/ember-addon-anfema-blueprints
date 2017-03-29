@@ -5,7 +5,7 @@ import hbs from 'htmlbars-inline-precompile';<% } %>
 
 describe('<%= friendlyTestDescription %>', function () {
 	setupComponentTest('<%= componentPathName %>', {
-		<% if (testType === 'integration' ) { %>integration: true<% } else if (testType === 'unit') { %>// needs: ['component:foo', 'helper:bar'],
+		<% if (testType === 'integration' ) { %>integration: true,<% } else if (testType === 'unit') { %>// needs: ['component:foo', 'helper:bar'],
 		unit: true,<% } %>
 	});
 
@@ -22,7 +22,6 @@ describe('<%= friendlyTestDescription %>', function () {
 		this.render(hbs`{{<%= dasherizedModuleName %>}}`);
 
 		expect(this.$()).to.have.length(1);<% } else if (testType === 'unit') { %>// creates the component instance
-
 		const component = this.subject();
 
 		// renders the component on the page

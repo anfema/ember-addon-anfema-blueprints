@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- Fixes component tests
+
 ## 0.2.0
 
 - Fixed spacing in router when generating new routes

@@ -19,7 +19,6 @@ describeComponent('<%= componentPathName %>', '<%= friendlyTestDescription %>', 
 		this.render(hbs`{{<%= dasherizedModuleName %>}}`);
 
 		expect(this.$()).to.have.length(1);<% } else if (testType === 'unit') { %>// creates the component instance
-
 		const component = this.subject();
 
 		// renders the component on the page
