@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.2
+
+- Cleanup helper-tests for mocha 0.12
+- `import run from 'ember-run';` should be `import run from 'ember-runloop';` now
+- Fix whitespacing in model blueprint
+- Prefer needs in tests to be multiline
+
 ## 0.3.1
 
 - Fixes component tests
