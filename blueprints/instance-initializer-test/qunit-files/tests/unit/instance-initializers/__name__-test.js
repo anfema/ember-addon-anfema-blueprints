@@ -1,5 +1,5 @@
 import Application from 'ember-application';
-import run from 'ember-run';
+import run from 'ember-runloop';
 import { initialize } from '<%= dasherizedModulePrefix %>/instance-initializers/<%= dasherizedModuleName %>';
 import { module, test } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';

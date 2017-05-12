@@ -4,7 +4,9 @@ import { setupTest } from 'ember-mocha';
 
 describe('<%= friendlyTestDescription %>', function () {
 	setupTest('route:<%= dasherizedModuleName %>', {
-		// needs: ['controller:foo']
+		// needs: [
+		// 	'controller:foo',
+		// ],
 	});
 
 	it('exists', function () {

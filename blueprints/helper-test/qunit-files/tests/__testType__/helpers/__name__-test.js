@@ -1,4 +1,4 @@
-<% if (testType == 'integration') { %>
+<%_ if (testType == 'integration') { -%>
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
