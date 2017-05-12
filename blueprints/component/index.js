@@ -1,8 +1,11 @@
+/* eslint-env node */
+
 const stringUtil = require('ember-cli-string-utils');
 const pathUtil = require('ember-cli-path-utils');
 const validComponentName = require('ember-cli-valid-component-name');
 const getPathOption = require('ember-cli-get-component-path-option');
 const path = require('path');
+
 const normalizeEntityName = require('ember-cli-normalize-entity-name');
 
 module.exports = {
@@ -14,9 +17,7 @@ module.exports = {
 			type: String,
 			default: 'components',
 			aliases: [
-				{
-					'no-path': '',
-				},
+        { 'no-path': '' },
 			],
 		},
 	],
@@ -56,7 +57,7 @@ module.exports = {
 	locals(options) {
 		let templatePath = '';
 		let importTemplate = '';
-		let contents = '\n';
+		let contents = '';
 
 		// if we're in an addon, build import statement
 		if (options.project.isEmberCLIAddon() || options.inRepoAddon && !options.inDummy) {
@@ -64,7 +65,7 @@ module.exports = {
 				templatePath = './template';
 			} else {
 				templatePath = `${pathUtil.getRelativeParentPath(options.entity.name)
-				}templates/components/${stringUtil.dasherize(options.entity.name)}`;
+          }templates/components/${stringUtil.dasherize(options.entity.name)}`;
 			}
 			importTemplate = `import layout from '${templatePath}';\n`;
 			contents = '\n\tlayout';
