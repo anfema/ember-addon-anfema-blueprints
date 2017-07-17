@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- Updated to new RFC176 modules
+
 ## 0.3.2
 
 - Cleanup helper-tests for mocha 0.12
