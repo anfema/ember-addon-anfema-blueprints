@@ -5,7 +5,6 @@ const pathUtil = require('ember-cli-path-utils');
 const validComponentName = require('ember-cli-valid-component-name');
 const getPathOption = require('ember-cli-get-component-path-option');
 const path = require('path');
-
 const normalizeEntityName = require('ember-cli-normalize-entity-name');
 
 module.exports = {
@@ -31,6 +30,7 @@ module.exports = {
 
 				return 'components';
 			},
+
 			__templatepath__(options) {
 				if (options.pod) {
 					return path.join(options.podPath, options.locals.path, options.dasherizedModuleName);
@@ -38,6 +38,7 @@ module.exports = {
 
 				return 'templates/components';
 			},
+
 			__templatename__(options) {
 				if (options.pod) {
 					return 'template';
@@ -64,9 +65,12 @@ module.exports = {
 			if (options.pod) {
 				templatePath = './template';
 			} else {
-				templatePath = `${pathUtil.getRelativeParentPath(options.entity.name)
-          }templates/components/${stringUtil.dasherize(options.entity.name)}`;
+				const relativeParentPath = pathUtil.getRelativeParentPath(options.entity.name);
+				const dasherizedName = stringUtil.dasherize(options.entity.name);
+
+				templatePath = `${relativeParentPath}templates/components/${dasherizedName}`;
 			}
+
 			importTemplate = `import layout from '${templatePath}';\n`;
 			contents = '\n\tlayout';
 		}

@@ -1,7 +1,7 @@
 import { describe, it, beforeEach, afterEach } from 'mocha';
 import { expect } from 'chai';
 import startApp from '<%= dasherizedPackageName %>/helpers/start-app';
-<% if (destroyAppExists) { %>import destroyApp from '<%= dasherizedPackageName %>/helpers/destroy-app';<% } else { %>import run from 'ember-runloop';<% } %>
+<% if (destroyAppExists) { %>import destroyApp from '<%= dasherizedPackageName %>/helpers/destroy-app';<% } else { %>import run from '@ember/runloop';<% } %>
 
 describe('<%= friendlyTestName %>', function () {
 	let application;
